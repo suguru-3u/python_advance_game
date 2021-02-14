@@ -17,21 +17,19 @@ battle_talk_3 = "敵を倒しました！！！！！"
 battle_talk_3 = "入力し直してください"
 
 #入力された値が半角、全角の空白かのチェック
-def input_cheack_blank(your_input_cheak):
+def input_cheack_blank():
     while True:
-        if(your_input_cheak == " "):
-            print(question_your_name2)
-        elif(your_input_cheak == "　")
+        brave_name = input(question_your_name)
+        if(not brave_name):
             print(question_your_name2)
         else:
             break
+    return brave_name
 
 #最初の挨拶
-print(game_greeting)
-brave_name = input(question_your_name)
-
 #勇者の名前の確認
-input_cheack_blank(brave_name)
+print(game_greeting)
+brave_name = input_cheack_blank()
 print(brave_name + caretaker_talk_1)
 
 #勇者の戦闘
